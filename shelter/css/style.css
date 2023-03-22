@@ -1,0 +1,583 @@
+@font-face {
+    font-family: "Arial Black";
+    src: local("Arial Black");
+    url("assets/fonts/arial-black.woff2") format ("woff2");
+    url("assets/fonts/arial-black.ttf") format ("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local("arial-bold");
+    url("assets/fonts/arial-bold.woff2") format ("woff2");
+    url("assets/fonts/arial-bold.ttf") format ("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local("arial-bold-italic");
+    url("assets/fonts/arial-bold-italic.woff2") format ("woff2");
+    url("assets/fonts/arial-bold-italic.ttf") format ("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local("arial-italic");
+    url("assets/fonts/arial-italic.woff2") format ("woff2");
+    url("assets/fonts/arial-italic.ttf") format ("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local("arial-narrow");
+    url("assets/fonts/arial-narrow.woff2") format ("woff2");
+    url("assets/fonts/arial-narrow.ttf") format ("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local("arial-narrow-bold");
+    url("assets/fonts/arial-narrow-bold.woff2") format ("woff2");
+    url("assets/fonts/arial-narrow-bold.ttf") format ("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local("arial-narrow-bold-italic");
+    url("assets/fonts/arial-narrow-bold-italic.woff2") format ("woff2");
+    url("assets/fonts/arial-narrow-bold-italic.ttf") format ("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local("arial-narrow-italic");
+    url("assets/fonts/arial-narrow-italic.woff2") format ("woff2");
+    url("assets/fonts/arial-narrow-italic.ttf") format ("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local("arial-regular");
+    url("assets/fonts/arial-regular.woff2") format ("woff2");
+    url("assets/fonts/arial-regular.ttf") format ("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: local("georgia-bold");
+    url("assets/fonts/georgia-bold.woff2") format ("woff2");
+    url("assets/fonts/georgia-bold.ttf") format ("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: local("georgia-bold-italic");
+    url("assets/fonts/georgia-bold-italic.woff2") format ("woff2");
+    url("assets/fonts/georgia-bold-italic.ttf") format ("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: local("georgia-italic");
+    url("assets/fonts/georgia-italic.woff2") format ("woff2");
+    url("assets/fonts/georgia-italic.ttf") format ("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: local("georgia-regular");
+    url("assets/fonts/georgia-regular.woff2") format ("woff2");
+    url("assets/fonts/georgia-renormalr.ttf") format ("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+.header-container {
+    background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
+.header {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+h1 {
+    margin: 30px 0 10px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    color: #F1CDB3;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo_description {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.header__list_link {
+    color: #CDCDCD;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.header__list-item:not(:last-child) {
+    margin-right: 35px;
+}
+
+/* section Not only */
+
+.not-only {
+    width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.not-only__content {
+    flex-basis: 40%;
+    margin-right: 42px;
+}
+
+.not-only__title {
+    margin: 253px 0 42px 0;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.not-only__description {
+    margin-bottom: 42px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #CDCDCD;
+}
+
+.not-only__btn {
+    display: inline-block;
+    margin: 0 0 152px 0;
+    padding: 15px 45px;
+    background: #F1CDB3;
+    border-radius: 100px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    color: #292929;
+}
+
+.not-only__pic {
+    width: 60%;
+    background-image: url("../assets/img/start-screen-puppy.png");
+    background-repeat: no-repeat;
+}
+
+/* section About */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 80px 40px 100px;
+    width: 1280px;
+}
+
+.about__left {
+    width: 40%;
+}
+
+.about__pic {
+    width: 300px;
+    height: 408px;
+    background-image: url("../assets/img/about-pets.png");
+}
+
+.about__content {
+    width: 50%;
+}
+
+.about__title {
+    width: 370px;
+    margin-bottom: 25px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    color: #545454;
+}
+
+.about__description {
+    margin-bottom: 25px;
+    width: 430px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4C4C4C;
+}
+
+.about__description:first-child {
+    margin-bottom: 25px;
+}
+
+/*section Our friends*/
+
+.friends__container {
+    background-color: #F6F6F6;
+}
+.friends {
+    margin: 0 auto;
+    padding: 80px 40px 100px;
+    width: 1280px;
+    background: #F6F6F6;
+}
+
+.friends__title {
+    margin: 0 auto 60px;
+    text-align: center;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    color: #545454;
+}
+
+.friends__animals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.animals__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    border-radius: 50%;
+}
+
+.animal__list {
+    padding: 0 40px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.animal__item {
+    background: #FAFAFA;
+}
+
+.animal__pet_photo {
+    margin-bottom: 30px;
+}
+
+.animal__pet_name {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.animal__pet_btn {
+    display: block;
+    width: 192px;
+    margin: 0 auto 30px;
+    padding: 15px 45px;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background: inherit;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+.animals__circle_arrow {
+    transform: rotate(180deg);
+}
+
+.friends__btn {
+    display: block;
+    background: #F1CDB3;
+    border-radius: 100px;
+    margin: 0 auto;
+    padding: 15px 45px;
+    width: 260px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    text-align: center;
+}
+
+/* section Help */
+
+.help__container {
+    background-color: #FFFFFF;;
+}
+
+.help {
+    margin: 0 auto;
+    padding: 80px 127px 0;
+    width: 1280px;
+}
+
+.help__title {
+    margin-bottom: 60px;
+    text-align: center;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.help__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.help__item {
+    margin-right: 119px;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.help__item_description {
+    text-align: center;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.help__item:nth-child(5) {
+    margin-right: 0;
+}
+
+.help__item:last-child {
+    margin-right: 0;
+}
+
+/* In addition */
+
+.addition {
+    background: #F6F6F6;;
+}
+
+.addition__container {
+    display: flex;
+    justify-content: center;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.addition__left_img {
+    margin: 91px 30px 110px 0;
+}
+
+.addition__title {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    width: 300px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+}
+
+.addition__bank-name {
+    margin-bottom: 20px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    color: #545454;
+}
+
+.addition__card {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #F1CDB3;
+    border-radius: 9px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.addition__card_logo {
+    margin-right: 15px;
+}
+
+.addition__description {
+    width: 380px;
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #B2B2B2;
+}
+
+/* footer */
+
+footer {
+background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 40px 40px 0;
+    width: 1280px;
+}
+
+.questions__title {
+    width: 280px;
+    margin-top: 16px;
+    margin-bottom: 43px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.questions__contacts {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 41px;
+}
+
+.questions__logo {
+    margin-right: 20px;
+}
+
+.questions__link {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.questions__pet {
+    width: 300px;
+    background-image: url("../assets/img/footer-puppy.png");
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
