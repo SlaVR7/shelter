@@ -1,122 +1,13 @@
-@font-face {
-    font-family: "Arial Black";
-    src: local("Arial Black");
-    url("assets/fonts/arial-black.woff2") format ("woff2");
-    url("assets/fonts/arial-black.ttf") format ("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Arial";
-    src: local("arial-bold");
-    url("assets/fonts/arial-bold.woff2") format ("woff2");
-    url("assets/fonts/arial-bold.ttf") format ("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Arial";
-    src: local("arial-bold-italic");
-    url("assets/fonts/arial-bold-italic.woff2") format ("woff2");
-    url("assets/fonts/arial-bold-italic.ttf") format ("truetype");
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Arial";
-    src: local("arial-italic");
-    url("assets/fonts/arial-italic.woff2") format ("woff2");
-    url("assets/fonts/arial-italic.ttf") format ("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Arial";
-    src: local("arial-narrow");
-    url("assets/fonts/arial-narrow.woff2") format ("woff2");
-    url("assets/fonts/arial-narrow.ttf") format ("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Arial";
-    src: local("arial-narrow-bold");
-    url("assets/fonts/arial-narrow-bold.woff2") format ("woff2");
-    url("assets/fonts/arial-narrow-bold.ttf") format ("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Arial";
-    src: local("arial-narrow-bold-italic");
-    url("assets/fonts/arial-narrow-bold-italic.woff2") format ("woff2");
-    url("assets/fonts/arial-narrow-bold-italic.ttf") format ("truetype");
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Arial";
-    src: local("arial-narrow-italic");
-    url("assets/fonts/arial-narrow-italic.woff2") format ("woff2");
-    url("assets/fonts/arial-narrow-italic.ttf") format ("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Arial";
-    src: local("arial-regular");
-    url("assets/fonts/arial-regular.woff2") format ("woff2");
-    url("assets/fonts/arial-regular.ttf") format ("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Georgia";
-    src: local("georgia-bold");
-    url("assets/fonts/georgia-bold.woff2") format ("woff2");
-    url("assets/fonts/georgia-bold.ttf") format ("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Georgia";
-    src: local("georgia-bold-italic");
-    url("assets/fonts/georgia-bold-italic.woff2") format ("woff2");
-    url("assets/fonts/georgia-bold-italic.ttf") format ("truetype");
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Georgia";
-    src: local("georgia-italic");
-    url("assets/fonts/georgia-italic.woff2") format ("woff2");
-    url("assets/fonts/georgia-italic.ttf") format ("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Georgia";
-    src: local("georgia-regular");
-    url("assets/fonts/georgia-regular.woff2") format ("woff2");
-    url("assets/fonts/georgia-renormalr.ttf") format ("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 1280px;
 }
 
 ul {
@@ -142,22 +33,17 @@ p {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 40px 0 43px;
 }
 
 h1 {
     margin: 30px 0 10px;
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 110%;
-    color: #F1CDB3;
 }
 
 .header__nav {
     display: flex;
     align-items: center;
+    margin-top: 30px;
 }
 
 .header__list {
@@ -165,25 +51,51 @@ h1 {
     justify-content: space-between;
 }
 
+.header__logo {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.06em;
+    line-height: 110%;
+    color: #F1CDB3;
+}
+
 .header__logo_description {
     margin: 0;
+    padding-left: 1px;
     color: #FFFFFF;
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
+    letter-spacing: 0.1em;
     line-height: 15px;
 }
 
 .header__list_link {
-    color: #CDCDCD;
+    color: inherit;
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
 }
 
-.header__list-item:not(:last-child) {
+.header__list_link:hover {
+    color: #FAFAFA;
+    transition-duration: .3s;
+}
+
+.header__list_item {
+    color: #CDCDCD;
+}
+
+.header__list_item:first-child {
+    color: #FAFAFA;
+    border-bottom: 3px solid #F1CDB3;
+}
+
+.header__list_item:not(:last-child) {
     margin-right: 35px;
 }
 
@@ -232,11 +144,19 @@ h1 {
     font-weight: 400;
     font-size: 17px;
     line-height: 130%;
+    letter-spacing: 0.06em;
     color: #292929;
 }
 
+.not-only__btn:hover {
+    background: #FDDCC4;
+    transition-duration: .3s;
+}
+
 .not-only__pic {
+    margin-top: 87px;
     width: 60%;
+    height: 728px;
     background-image: url("../assets/img/start-screen-puppy.png");
     background-repeat: no-repeat;
 }
@@ -245,14 +165,14 @@ h1 {
 
 .about {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
-    padding: 80px 40px 100px;
+    padding: 80px 40px 85px;
     width: 1280px;
 }
 
 .about__left {
-    width: 40%;
+    width: 35%;
 }
 
 .about__pic {
@@ -261,17 +181,15 @@ h1 {
     background-image: url("../assets/img/about-pets.png");
 }
 
-.about__content {
-    width: 50%;
-}
-
 .about__title {
     width: 370px;
+    margin-top: 16px;
     margin-bottom: 25px;
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
+    letter-spacing: 0.06em;
     line-height: 130%;
     color: #545454;
 }
@@ -304,12 +222,13 @@ h1 {
 }
 
 .friends__title {
-    margin: 0 auto 60px;
+    margin: 0 auto 43px;
     text-align: center;
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
+    letter-spacing: 0.06em;
     line-height: 130%;
     color: #545454;
 }
@@ -318,7 +237,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 41px;
 }
 
 .animals__circle {
@@ -331,23 +250,41 @@ h1 {
     border-radius: 50%;
 }
 
+.animals__circle:hover {
+    background: #FDDCC4;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
 .animal__list {
-    padding: 0 40px;
+    padding: 0 53px;
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
 }
 
 .animal__item {
+    overflow: hidden;
+    border-radius: 9px;
     background: #FAFAFA;
 }
 
+.animal__item:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+}
+
+.animal__item:hover .animal__pet_btn {
+    background: #FDDCC4;
+    transition-duration: .3s;
+}
+
 .animal__pet_photo {
-    margin-bottom: 30px;
+    margin-bottom: 6px;
 }
 
 .animal__pet_name {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
     text-align: center;
     font-family: 'Georgia';
     font-style: normal;
@@ -384,14 +321,21 @@ h1 {
     background: #F1CDB3;
     border-radius: 100px;
     margin: 0 auto;
-    padding: 15px 45px;
+    padding: 15px 44px;
     width: 260px;
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
+    letter-spacing: 0.06em;
     line-height: 130%;
     text-align: center;
+}
+
+.friends__btn:hover {
+    background: #FDDCC4;
+    cursor: pointer;
+    transition-duration: .3s;
 }
 
 /* section Help */
@@ -401,8 +345,8 @@ h1 {
 }
 
 .help {
-    margin: 0 auto;
-    padding: 80px 127px 0;
+    margin: 0 auto 46px;
+    padding: 53px 127px 0;
     width: 1280px;
 }
 
@@ -426,7 +370,7 @@ h1 {
 
 .help__item {
     margin-right: 119px;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -466,7 +410,7 @@ h1 {
 }
 
 .addition__left_img {
-    margin: 91px 30px 110px 0;
+    margin: 91px 30px 106px 0;
 }
 
 .addition__title {
@@ -477,6 +421,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
+    letter-spacing: 0.06em;
     line-height: 130%;
 }
 
@@ -486,13 +431,15 @@ h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
+    letter-spacing: 0.06em;
     line-height: 110%;
     color: #545454;
 }
 
 .addition__card {
     display: inline-block;
-    padding: 10px 15px;
+    margin-bottom: 18px;
+    padding: 9px 15px;
     background: #F1CDB3;
     border-radius: 9px;
     font-family: 'Georgia';
@@ -505,7 +452,11 @@ h1 {
 }
 
 .addition__card_logo {
-    margin-right: 15px;
+    margin-right: 10px;
+}
+
+.addition__card_number {
+    vertical-align: top;
 }
 
 .addition__description {
@@ -534,8 +485,7 @@ background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.6
 
 .questions__title {
     width: 280px;
-    margin-top: 16px;
-    margin-bottom: 43px;
+    margin: 16px 0 43px;
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -545,19 +495,59 @@ background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.6
     color: #FFFFFF;
 }
 
+.questions__title_second {
+    margin-bottom: 33px;
+}
+
+.footer__questions-second {
+    margin-left: -22px;
+}
+
 .questions__contacts {
     display: flex;
     justify-content: left;
     align-items: center;
     width: 300px;
-    margin-bottom: 41px;
+    margin-bottom: 47px;
+}
+
+.questions__contacts_item {
+
+}
+
+.questions__contacts_link {
+    display: flex;
+}
+
+.questions__contacts_link:hover {
+    text-decoration: underline;
+    text-decoration-color: #F1CDB3;
 }
 
 .questions__logo {
     margin-right: 20px;
 }
 
-.questions__link {
+.gps {
+    margin-top: 6px;
+    margin-right: 19px;
+}
+
+.tel {
+    margin-top: -5px;
+}
+
+.boston {
+    margin-bottom: 37px;
+}
+
+.second__gps {
+    margin-top: -6px;
+    margin-right: 18px;
+}
+
+.questions__link, .questions__link_address {
+    display: flex;
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -567,8 +557,15 @@ background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.6
     color: #F1CDB3;
 }
 
+.questions__link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
 .questions__pet {
     width: 300px;
+    height: 310px;
     background-image: url("../assets/img/footer-puppy.png");
     background-repeat: no-repeat;
 }
