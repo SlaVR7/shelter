@@ -36,8 +36,17 @@ p {
     padding: 0 40px 0 43px;
 }
 
+.header__logo-container:hover h1 a {
+    color: yellow;
+}
+
+.header__logo-container:hover p a {
+    color: yellow;
+    transition-duration: .3s;
+}
+
 h1 {
-    margin: 30px 0 10px;
+    margin: 30px 0 0;
 }
 
 .header__nav {
@@ -52,7 +61,9 @@ h1 {
 }
 
 .header__logo {
-    font-family: 'Georgia';
+    display: block;
+    padding-bottom: 10px;
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -65,7 +76,7 @@ h1 {
     margin: 0;
     padding-left: 1px;
     color: #FFFFFF;
-    font-family: 'Arial';
+    font-family: 'Arial', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -73,9 +84,13 @@ h1 {
     line-height: 15px;
 }
 
+.header__logo_link {
+    transition-duration: .3s;
+}
+
 .header__list_link {
     color: inherit;
-    font-family: 'Arial';
+    font-family: 'Arial', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -115,7 +130,7 @@ h1 {
 
 .not-only__title {
     margin: 253px 0 42px 0;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 44px;
@@ -125,7 +140,7 @@ h1 {
 
 .not-only__description {
     margin-bottom: 42px;
-    font-family: 'Arial';
+    font-family: 'Arial', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -139,7 +154,7 @@ h1 {
     padding: 15px 45px;
     background: #F1CDB3;
     border-radius: 100px;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -185,7 +200,7 @@ h1 {
     width: 370px;
     margin-top: 16px;
     margin-bottom: 25px;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -197,7 +212,7 @@ h1 {
 .about__description {
     margin-bottom: 25px;
     width: 430px;
-    font-family: 'Arial';
+    font-family: 'Arial', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -224,7 +239,7 @@ h1 {
 .friends__title {
     margin: 0 auto 43px;
     text-align: center;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -286,7 +301,7 @@ h1 {
 .animal__pet_name {
     margin-bottom: 29px;
     text-align: center;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -303,13 +318,14 @@ h1 {
     border: 2px solid #F1CDB3;
     border-radius: 100px;
     background: inherit;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
+    cursor: pointer;
 }
 
 .animals__circle_arrow {
@@ -323,7 +339,7 @@ h1 {
     margin: 0 auto;
     padding: 15px 44px;
     width: 260px;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -353,7 +369,7 @@ h1 {
 .help__title {
     margin-bottom: 60px;
     text-align: center;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -379,7 +395,7 @@ h1 {
 
 .help__item_description {
     text-align: center;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -417,7 +433,7 @@ h1 {
     margin-top: 80px;
     margin-bottom: 20px;
     width: 300px;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -427,7 +443,7 @@ h1 {
 
 .addition__bank-name {
     margin-bottom: 20px;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -442,7 +458,7 @@ h1 {
     padding: 9px 15px;
     background: #F1CDB3;
     border-radius: 9px;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -459,9 +475,13 @@ h1 {
     vertical-align: top;
 }
 
+.addition__card_number:hover {
+    color: red;
+}
+
 .addition__description {
     width: 380px;
-    font-family: 'Arial';
+    font-family: 'Arial', serif;
     font-style: italic;
     font-weight: 400;
     font-size: 12px;
@@ -486,7 +506,7 @@ background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.6
 .questions__title {
     width: 280px;
     margin: 16px 0 43px;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
@@ -521,7 +541,16 @@ background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.6
 
 .questions__contacts_link:hover {
     text-decoration: underline;
-    text-decoration-color: #F1CDB3;
+    text-decoration-color: red;
+    transition-duration: .3s;
+}
+
+.questions__contacts:hover .questions__contacts_link .questions__link_address{
+    color: red;
+}
+
+.questions__contacts:hover svg path {
+    fill: red;
 }
 
 .questions__logo {
@@ -548,7 +577,7 @@ background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.6
 
 .questions__link, .questions__link_address {
     display: flex;
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -561,6 +590,11 @@ background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.6
     text-decoration: underline;
     cursor: pointer;
     transition-duration: .3s;
+    color: red;
+}
+
+.questions__link:hover svg path {
+    fill: red;
 }
 
 .questions__pet {

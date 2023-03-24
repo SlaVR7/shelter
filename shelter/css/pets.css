@@ -32,10 +32,6 @@ p {
     margin-bottom: 29px;
 }
 
-h1 {
-    margin: 30px 0 10px;
-}
-
 .header__nav {
     display: flex;
     align-items: center;
@@ -49,6 +45,15 @@ h1 {
 
 .header__logo {
     color: #545454;
+}
+
+.header__logo-container:hover h1 a {
+    color: grey;
+}
+
+.header__logo-container:hover p a {
+    color: grey;
+    transition-duration: .3s;
 }
 
 .header__logo_description {
@@ -135,7 +140,7 @@ h1 {
     border-radius: 100px;
 }
 
-.animal__nav_item:hover {
+.animal__nav_page:hover, .animal__nav_next:hover {
     background-color: #FDDCC4;
     cursor: pointer;
 }
