@@ -118,7 +118,7 @@ h1 {
 
 .not-only {
     width: 1280px;
-    padding: 0 40px;
+    padding: 3px 40px 0;
     margin: 0 auto;
     display: flex;
 }
@@ -361,7 +361,7 @@ h1 {
 }
 
 .help {
-    margin: 0 auto 46px;
+    margin: 0 auto 42px;
     padding: 53px 127px 0;
     width: 1280px;
 }
@@ -391,6 +391,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2px;
 }
 
 .help__item_description {
@@ -427,6 +428,10 @@ h1 {
 
 .addition__left_img {
     margin: 91px 30px 106px 0;
+}
+
+.addition__content {
+    margin-right: 6px;
 }
 
 .addition__title {
@@ -480,11 +485,11 @@ h1 {
 }
 
 .addition__description {
-    width: 380px;
-    font-family: 'Arial', serif;
+    width: 374px;
+    font-family: 'Arial';
     font-style: italic;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 18px;
     color: #B2B2B2;
 }
@@ -492,7 +497,7 @@ h1 {
 /* footer */
 
 footer {
-background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+background: url("../assets/img/footer-gradient-background.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
 .footer__container {
