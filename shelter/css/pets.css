@@ -65,10 +65,15 @@ p {
     color: #545454;
 }
 
-.header__list_link:hover {
+.header__list_item:hover .header__list_link {
     color: #292929;
     transition-duration: .3s;
 }
+
+.header__list_item:nth-child(2):hover .header__list_link {
+    color: #545454;
+}
+
 
 .header__list_item {
     color: #545454;
@@ -155,5 +160,124 @@ p {
 
 .animal__nav_next {
     border: 2px solid #F1CDB3
+}
+
+@media (max-width: 1279px ) {
+
+    body {
+        min-width: initial;
+    }
+
+    .friends {
+        padding-bottom: 75px;
+    }
+
+    .friends__container {
+        width: initial;
+    }
+
+    .friends__title {
+        margin-bottom: 30px;
+    }
+
+    .friends__list {
+        justify-content: space-evenly;
+        gap: 28px 0;
+        margin-bottom: 40px;
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+
+    .animal__nav {
+        margin-bottom: 0;
+    }
+
+    .animal__item:first-child {
+        margin-right: 0;
+    }
+
+    .animal__item:nth-last-child(2) {
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .header__nav {
+        display: none;
+    }
+
+    .burger__line {
+        background-color: #000000;
+    }
+
+    .friends {
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+
+    .friends__title {
+        margin-bottom: 42px;
+    }
+
+    .friends__list {
+        margin-bottom: 45px;
+        padding: 0;
+        row-gap: 32px;
+    }
+
+    .animal__item:nth-child(-n+3) {
+        display: block;
+    }
+
+    .animal__nav {
+        gap: 10px;
+    }
+
+    .questions__pet {
+        width: 260px;
+        height: 269px;
+        background-size: contain;
+    }
+
+    .questions__title {
+        margin-left: 0;
+        width: 278px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .questions__title_second {
+        margin-left: 10px;
+        margin-bottom: 40px;
+    }
+
+    .footer__container {
+        padding: 16px 0 0;
+    }
+
+    .questions__contacts_mail {
+        margin-left: 12px;
+        width: initial;
+    }
+
+    .questions__contacts_tel {
+        margin-left: 20px;
+        margin-bottom: 24px;
+    }
+
+    .questions__contacts_boston {
+        margin-left: 0;
+        margin-bottom: 43px;
+    }
+
+    .questions__contacts_london {
+        margin-left: 0;
+    }
+
+    .questions__pet {
+        margin-top: 40px;
+    }
 }
 
