@@ -100,7 +100,7 @@ h1 {
     font-size: 15px;
 }
 
-.header__list_link:hover {
+.header__list_item:not(:first-child):hover {
     color: #FAFAFA;
     transition-duration: .3s;
 }
@@ -112,6 +112,10 @@ h1 {
 .header__list_item:first-child {
     color: #FAFAFA;
     border-bottom: 3px solid #F1CDB3;
+}
+
+.header__list_item:first-child:hover .header__list_link {
+    cursor: default;
 }
 
 .header__list_item:not(:last-child) {

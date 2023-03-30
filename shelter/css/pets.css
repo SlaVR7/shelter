@@ -72,6 +72,11 @@ p {
 
 .header__list_item:nth-child(2):hover .header__list_link {
     color: #545454;
+    cursor: default;
+}
+
+.header__list_item:first-child:hover .header__list_link {
+    cursor: pointer;
 }
 
 
