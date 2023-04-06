@@ -12,6 +12,26 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <div class="wrapper">
+    <div class="burger-menu" id="burgerMenu">
+        <nav>
+            <ul class="burger-menu__list">
+                <li class="burger-menu__item">
+                    <a class="burger-menu___link" href="">About the shelter</a>
+                </li>
+                <li class="burger-menu__item">
+                    <a class="burger-menu___link" href="pets.html">Our pets</a>
+                </li>
+                <li class="burger-menu__item">
+                    <a class="burger-menu___link" href="#help">Help the shelter</a>
+                </li>
+                <li class="burger-menu__item">
+                    <a class="burger-menu___link" href="#footer">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header-container">
         <div class="header">
             <div class="header__logo-container">
@@ -22,7 +42,7 @@
                     <a class="header__logo_link" href="">Shelter for pets in Boston</a>
                 </p>
             </div>
-            <div class="burger">
+            <div class="burger" id="burgerBtn">
                 <div class="burger__line"></div>
                 <div class="burger__line"></div>
                 <div class="burger__line"></div>
@@ -45,9 +65,9 @@
             </nav>
         </div>
     </header>
-    <main>
 
-<!--            section "Not-only"                 -->
+
+    <!--            section "Not-only"                 -->
 
         <section class="header-container">
             <div class="not-only">
@@ -61,6 +81,7 @@
             </div>
         </section>
 
+    <main>
 <!--            section "About"           -->
 
             <section class="about">
@@ -80,35 +101,96 @@
 
 <!--        section "Our friends"           -->
 
+<!--        <div class="popup">-->
+<!--            <div class="popup__image"></div>-->
+<!--            <div class="popup__description">-->
+<!--                <h3 class="popup__title"></h3>-->
+<!--                <div>-->
+<!--                    <span class="type"></span> - <span class="breed"></span>-->
+<!--                </div>-->
+<!--                <p class="popup__paragraph"></p>-->
+<!--                <ul>-->
+<!--                    <li class="age"></li>-->
+<!--                    <li class="inoculations"></li>-->
+<!--                    <li class="diseases"></li>-->
+<!--                    <li class="parasites"></li>-->
+<!--                </ul>-->
+
+<!--            </div>-->
+<!--        </div>-->
+
         <section id="friends" class="friends__container">
             <div class="friends">
                 <h2 class="friends__title">
                     Our friends who <br> are looking for a house
                 </h2>
                 <div class="friends__animals">
-                    <div class="animals__circle">
+                    <div class="animals__circle" id="btnLeft">
                         <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929"/>
                         </svg>
                     </div>
-                    <ul class="animal__list">
-                        <li class="animal__item">
-                            <img class="animal__pet_photo" src="assets/img/small%20pets/katrine.png" alt="Cat Katrine">
-                            <h3 class="animal__pet_name">Katrine</h3>
-                            <button class="animal__pet_btn">Learn more</button>
-                        </li>
-                        <li class="animal__item">
-                            <img class="animal__pet_photo" src="assets/img/small%20pets/jennifer.png" alt="Dog Jennifer">
-                            <h3 class="animal__pet_name">Jennifer</h3>
-                            <button class="animal__pet_btn">Learn more</button>
-                        </li>
-                        <li class="animal__item">
-                            <img class="animal__pet_photo" src="assets/img/small%20pets/woody.png" alt="Dog Woody">
-                            <h3 class="animal__pet_name">Woody</h3>
-                            <button class="animal__pet_btn">Learn more</button>
-                        </li>
-                    </ul>
-                    <div class="animals__circle">
+                    <div class="carousel__wrapper">
+                        <ul class="animal__list">
+
+    <!--                        1-->
+
+                            <li class="animal__item" id="item-left">
+                                <img class="animal__pet_photo" id="pet1Photo" src="assets/img/small%20pets/katrine.png" alt="Cat Katrine">
+                                <h3 class="animal__pet_name" id="pet1Name">Katrine</h3>
+                                <button class="animal__pet_btn">Learn more</button>
+                            </li>
+                            <li class="animal__item">
+                                <img class="animal__pet_photo" id="pet2Photo" src="assets/img/small%20pets/jennifer.png" alt="Dog Jennifer">
+                                <h3 class="animal__pet_name" id="pet2Name">Jennifer</h3>
+                                <button class="animal__pet_btn">Learn more</button>
+                            </li>
+                            <li class="animal__item">
+                                <img class="animal__pet_photo" id="pet3Photo" src="assets/img/small%20pets/woody.png" alt="Dog Woody">
+                                <h3 class="animal__pet_name" id="pet3Name">Woody</h3>
+                                <button class="animal__pet_btn">Learn more</button>
+                            </li>
+
+    <!--                        2-->
+
+                            <li class="animal__item">
+                                <img class="animal__pet_photo" id="pet1Photo" src="assets/img/small%20pets/katrine.png" alt="Cat Katrine">
+                                <h3 class="animal__pet_name" id="pet1Name">Katrine</h3>
+                                <button class="animal__pet_btn">Learn more</button>
+                            </li>
+                            <li class="animal__item">
+                                <img class="animal__pet_photo" id="pet2Photo" src="assets/img/small%20pets/jennifer.png" alt="Dog Jennifer">
+                                <h3 class="animal__pet_name" id="pet2Name">Jennifer</h3>
+                                <button class="animal__pet_btn">Learn more</button>
+                            </li>
+                            <li class="animal__item">
+                                <img class="animal__pet_photo" id="pet3Photo" src="assets/img/small%20pets/woody.png" alt="Dog Woody">
+                                <h3 class="animal__pet_name" id="pet3Name">Woody</h3>
+                                <button class="animal__pet_btn">Learn more</button>
+                            </li>
+
+    <!--                        3-->
+
+                            <li class="animal__item" id="item-right">
+                                <img class="animal__pet_photo" id="pet3Photo" src="assets/img/small%20pets/katrine.png" alt="Cat Katrine">
+                                <h3 class="animal__pet_name" id="pet1Name">Katrine</h3>
+                                <button class="animal__pet_btn">Learn more</button>
+                            </li>
+                            <li class="animal__item">
+                                <img class="animal__pet_photo" id="pet3Photo" src="assets/img/small%20pets/jennifer.png" alt="Dog Jennifer">
+                                <h3 class="animal__pet_name" id="pet2Name">Jennifer</h3>
+                                <button class="animal__pet_btn">Learn more</button>
+                            </li>
+                            <li class="animal__item">
+                                <img class="animal__pet_photo" id="pet3Photo" src="assets/img/small%20pets/woody.png" alt="Dog Woody">
+                                <h3 class="animal__pet_name" id="pet3Name">Woody</h3>
+                                <button class="animal__pet_btn">Learn more</button>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="animals__circle" id="btnRight">
                         <svg class="animals__circle_arrow" width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929"/>
                         </svg>
@@ -283,6 +365,8 @@
             </div>
         </div>
     </footer>
-    <script src="js/index.js"></script>
+    </div>
+    <script type="module" src="js/main.js"></script>
+
 </body>
 </html>

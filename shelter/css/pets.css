@@ -284,5 +284,15 @@ p {
     .questions__pet {
         margin-top: 40px;
     }
+
+    .burger-menu__item:first-child {
+        color: #CDCDCD;
+        border-bottom: none;
+    }
+
+    .burger-menu__item:nth-child(2) {
+        color: #FAFAFA;
+        border-bottom: 3px solid #F1CDB3;
+    }
 }
 

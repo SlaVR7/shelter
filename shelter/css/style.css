@@ -24,6 +24,10 @@ p {
     margin: 0;
 }
 
+.burger-menu {
+    display: none;
+}
+
 .header-container {
     background: url("../assets/img/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
@@ -34,10 +38,6 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 0 40px 0 43px;
-}
-
-.burger {
-    display: none;
 }
 
 .header__logo-container:hover h1 a {
@@ -234,6 +234,23 @@ h1 {
 
 /*section Our friends*/
 
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    width: 900px;
+    height: 600px;
+    background-color: #FAFAFA;
+    transform:translate(-50%, -50%);
+    border-radius: 9px;
+}
+
 .friends__container {
     background-color: #F6F6F6;
 }
@@ -279,17 +296,55 @@ h1 {
     transition-duration: .3s;
 }
 
-.animal__list {
-    padding: 0 53px;
+.carousel__wrapper {
     flex-grow: 1;
+    width: 990px;
+    overflow: hidden;
+}
+
+.animal__list {
+    position: relative;
+    left: -1080px;
+    padding: 0 53px;
     display: flex;
-    justify-content: space-between;
+    column-gap: 90px;
 }
 
 .animal__item {
+    flex-shrink: 0;
     overflow: hidden;
     border-radius: 9px;
     background: #FAFAFA;
+}
+
+@keyframes  move-left {
+    from {
+        left: -1080px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.left-transition {
+    animation-name: move-left;
+    animation-duration: 3s;
+}
+
+@keyframes  move-right {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -1080px;
+    }
+}
+
+.right-transition {
+    animation-name: move-right;
+    animation-duration: 3s;
 }
 
 .animal__item:hover {
@@ -767,6 +822,16 @@ background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 10
 
 @media (max-width: 767px) {
 
+    .darkness::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
     .header {
         padding: 0 20px 0 22px;
     }
@@ -778,6 +843,60 @@ background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 10
     .burger {
         margin-top: 48px;
         display: block;
+        z-index: 10;
+        transform: rotate(0deg);
+        transition-duration: .5s;
+    }
+
+    .rotate {
+        transform: rotate(-90deg);
+        transform-origin: center;
+    }
+
+    .overflow {
+        overflow: hidden;
+    }
+
+    .burger-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        height: 100vh;
+        background-color: #292929;
+        transform: translateX(320px);
+        transition-duration: .5s;
+        z-index: 5;
+    }
+
+    .transform {
+        transform: translateX(0);
+    }
+
+    .burger-menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        row-gap: 40px;
+    }
+
+    .burger-menu__item {
+        font-family: 'Arial', 'sans-serif';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 160%;
+        color: #CDCDCD;
+    }
+
+    .burger-menu__item:first-child {
+        color: #FAFAFA;
+        border-bottom: 3px solid #F1CDB3;
     }
 
     .burger__line {
