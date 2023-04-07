@@ -310,6 +310,11 @@ h1 {
     column-gap: 90px;
 }
 
+.animal__triple {
+    display: flex;
+    column-gap: 90px;
+}
+
 .animal__item {
     flex-shrink: 0;
     overflow: hidden;
@@ -329,22 +334,22 @@ h1 {
 
 .left-transition {
     animation-name: move-left;
-    animation-duration: 3s;
+    animation-duration: 1s;
 }
 
 @keyframes  move-right {
     from {
-        left: 0;
+        left: -1080px;
     }
 
     to {
-        left: -1080px;
+        left: -2160px;
     }
 }
 
 .right-transition {
     animation-name: move-right;
-    animation-duration: 3s;
+    animation-duration: 1s;
 }
 
 .animal__item:hover {
@@ -674,6 +679,55 @@ background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 10
 
 @media (max-width: 1279px) {
 
+    .carousel__wrapper {
+        flex-grow: 1;
+        width: 580px;
+        overflow: hidden;
+    }
+
+    .animal__list {
+        position: relative;
+        left: 0;
+        padding: 0 53px;
+        display: flex;
+        column-gap: 300px;
+    }
+
+    .animal__triple {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    @keyframes  move-left {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 880px;
+        }
+    }
+
+    .left-transition {
+        animation-name: move-left;
+        animation-duration: 1s;
+    }
+
+    @keyframes  move-right {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: -880px;
+        }
+    }
+
+    .right-transition {
+        animation-name: move-right;
+        animation-duration: 1s;
+    }
+
     body {
         min-width: initial;
     }
@@ -821,6 +875,54 @@ background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 10
 }
 
 @media (max-width: 767px) {
+
+    .carousel__wrapper {
+        flex-grow: 1;
+        overflow: hidden;
+    }
+
+    .animal__list {
+        position: relative;
+        left: 0;
+        padding: 0 53px;
+        display: flex;
+        column-gap: 300px;
+    }
+
+    .animal__triple {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    @keyframes  move-left {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 570px;
+        }
+    }
+
+    .left-transition {
+        animation-name: move-left;
+        animation-duration: 1s;
+    }
+
+    @keyframes  move-right {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: -570px;
+        }
+    }
+
+    .right-transition {
+        animation-name: move-right;
+        animation-duration: 1s;
+    }
 
     .darkness::after {
         content: '';
@@ -985,6 +1087,7 @@ background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 10
 
     .friends__animals {
         flex-wrap: wrap;
+        column-gap: 70px;
     }
 
     .animal__list {
@@ -1070,7 +1173,7 @@ background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 10
     }
 
     .addition__card_number {
-        font-family: 'Georgia';
+        font-family: 'Georgia', 'sans-serif';
         font-style: normal;
         font-weight: 400;
         font-size: 15px;

@@ -77,52 +77,36 @@
             </h2>
             <ul class="friends__list">
                 <li class="animal__item">
-                    <img class="animal__pet_photo" src="assets/img/small%20pets/katrine.png" alt="Cat Katrine">
-                    <h3 class="animal__pet_name">Katrine</h3>
                     <button class="animal__pet_btn">Learn more</button>
                 </li>
                 <li class="animal__item">
-                    <img class="animal__pet_photo" src="assets/img/small%20pets/jennifer.png" alt="Dog Jennifer">
-                    <h3 class="animal__pet_name">Jennifer</h3>
                     <button class="animal__pet_btn">Learn more</button>
                 </li>
                 <li class="animal__item">
-                    <img class="animal__pet_photo" src="assets/img/small%20pets/woody.png" alt="Dog Woody">
-                    <h3 class="animal__pet_name">Woody</h3>
                     <button class="animal__pet_btn">Learn more</button>
                 </li>
                 <li class="animal__item">
-                    <img class="animal__pet_photo" src="assets/img/small%20pets/sophia.png" alt="Dog Sophia">
-                    <h3 class="animal__pet_name">Sophia</h3>
                     <button class="animal__pet_btn">Learn more</button>
                 </li>
                 <li class="animal__item">
-                    <img class="animal__pet_photo" src="assets/img/small%20pets/timmy.png" alt="Cat Timmy">
-                    <h3 class="animal__pet_name">Timmy</h3>
                     <button class="animal__pet_btn">Learn more</button>
                 </li>
                 <li class="animal__item">
-                    <img class="animal__pet_photo" src="assets/img/small%20pets/charly.png" alt="Dog Charly">
-                    <h3 class="animal__pet_name">Charly</h3>
                     <button class="animal__pet_btn">Learn more</button>
                 </li>
                 <li class="animal__item">
-                    <img class="animal__pet_photo" src="assets/img/small%20pets/scarlett.png" alt="Dog Scarlett">
-                    <h3 class="animal__pet_name">Scarlett</h3>
                     <button class="animal__pet_btn">Learn more</button>
                 </li>
                 <li class="animal__item">
-                    <img class="animal__pet_photo" src="assets/img/small%20pets/freddie.png" alt="Cat Freddie">
-                    <h3 class="animal__pet_name">Freddie</h3>
                     <button class="animal__pet_btn">Learn more</button>
                 </li>
             </ul>
             <ul class="animal__nav">
-                <li class="animal__nav_item animal__nav_back">&lt;&lt;</li>
-                <li class="animal__nav_item animal__nav_back">&lt;</li>
-                <li class="animal__nav_item animal__nav_page">1</li>
-                <li class="animal__nav_item animal__nav_next">></li>
-                <li class="animal__nav_item animal__nav_next">>></li>
+                <li class="animal__nav_item animal__nav_deactivate" id="firstPage">&lt;&lt;</li>
+                <li class="animal__nav_item animal__nav_deactivate" id="prevPage">&lt;</li>
+                <li class="animal__nav_item animal__nav_page" id="currentPage">1</li>
+                <li class="animal__nav_item animal__nav_active" id="nextPage">></li>
+                <li class="animal__nav_item animal__nav_active" id="lastPage">>></li>
             </ul>
         </div>
     </section>
@@ -178,6 +162,6 @@
     </div>
 </footer>
 </div>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/pets.js"></script>
 </body>
 </html>

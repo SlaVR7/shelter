@@ -155,16 +155,22 @@ p {
     cursor: pointer;
 }
 
-.animal__nav_back {
+.animal__nav_page:hover {
+    cursor: default;
+}
+
+.animal__nav_deactivate {
     border: 2px solid #CDCDCD;
+    cursor: default;
 }
 
 .animal__nav_page {
     background-color: #F1CDB3;
 }
 
-.animal__nav_next {
-    border: 2px solid #F1CDB3
+.animal__nav_active {
+    border: 2px solid #F1CDB3;
+    cursor: pointer;
 }
 
 @media (max-width: 1279px ) {
