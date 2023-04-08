@@ -224,13 +224,60 @@ const bigImgContainer = document.querySelector('.popup__image'),
     bigDiseases = document.querySelector('.diseases'),
     bigParasites = document.querySelector('.parasites'),
     bigImg = document.createElement('img'),
-    popWrapper = document.querySelector('.popup-wrapper'),
-    cardImage = document.querySelectorAll('.animal__pet_photo'),
-    cardTitle = document.querySelectorAll('.animal__pet_name'),
-    cardBtn = document.querySelectorAll('.animal__pet_btn');
+    popWrapper = document.querySelector('.popup-wrapper');
+
+
+
 
 function showPopup() {
-    let number = randArr[randArr.length - 1] % 8;
+    let number;
+
+    switch (this.a) {
+        case 0:
+            number = randArr[randArr.length - 1] % 8;
+            break;
+        case 1:
+            number = randArr[randArr.length - 1] % 8 + 1;
+            break;
+        case 2:
+            number = randArr[randArr.length - 1] % 8 + 2;
+            break;
+        case 3:
+            number = randArr[randArr.length - 1] % 8 + 3;
+            break;
+        case 4:
+            number = randArr[randArr.length - 1] % 8 + 4;
+            break;
+        case 5:
+            number = randArr[randArr.length - 1] % 8 + 5;
+            break;
+        case 6:
+            number = randArr[randArr.length - 1] % 8 + 6;
+            break;
+        case 7:
+            number = randArr[randArr.length - 1] % 8 + 7;
+            break;
+    }
+
+    switch (number) {
+        case 8: number = 0;
+            break;
+        case 9: number = 1;
+            break;
+        case 10: number = 2;
+            break;
+        case 11: number = 3;
+            break;
+        case 12: number = 4;
+            break;
+        case 13: number = 5;
+            break;
+        case 14: number = 6;
+            break;
+    }
+
+
+
 
     wrapper.classList.add('darkness2');
     popWrapper.classList.add('flex');
@@ -249,14 +296,17 @@ function showPopup() {
 }
 
 function hidePopup(event) {
+    const cardImage = document.querySelectorAll('.animal__pet_photo'),
+          cardTitle = document.querySelectorAll('.animal__pet_name'),
+          cardBtn = document.querySelectorAll('.animal__pet_btn');
     let result;
-    console.log(event.target !== cardImage[0])
+
     for (let i = 0; i < 8; i++) {
 
 
         if (event.target !== popup && event.target !== cardImage[i] && event.target !== cardTitle[i] && event.target !==cardBtn[i] && event.target !== popItem[i]) {
             result = true;
-        } else return;
+        } else  return;
     }
 
     if (result) {
