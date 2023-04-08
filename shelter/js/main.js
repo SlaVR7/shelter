@@ -83,7 +83,6 @@ function animationEnd(animation) {
         //  CENTRAL ITEM
         let random2;
         random === myJson.length - 1 ? random2 = 0 : random2 = random + 1;
-        console.log(random2)
 
         const image2 = document.createElement('img');
         image2.classList.add('animal__pet_photo');
@@ -100,7 +99,6 @@ function animationEnd(animation) {
         // RIGHT ITEM
         let random3;
         random2 === myJson.length - 1 ? random3 = 0 : random3 = random2 + 1;
-        console.log(random3)
 
         const image3 = document.createElement('img');
         image3.classList.add('animal__pet_photo');
@@ -289,20 +287,50 @@ if (document.documentElement.clientWidth < 768) {
     itemRight.innerHTML = '';
 }
 
+// POPUP
+
+const popItem = document.querySelectorAll('.animal__item'),
+      popWrapper = document.querySelector('.popup-wrapper'),
+      popup = document.querySelector('.popup'),
+    popPhoto = document.querySelectorAll('.animal__pet_photo'),
+    popTitle = document.querySelectorAll('.animal__pet_name'),
+    popBtn = document.querySelectorAll('.animal__pet_btn');
+
+
+function showPopup() {
+    console.log(wrapper)
+    console.log(popWrapper)
+    wrapper.classList.add('darkness2');
+    popWrapper.classList.add('flex');
+    document.body.classList.add('overflow2');
+}
+
+
+function hidePopup(event) {
+    let result;
+
+    for (let i = 0; i < 9; i++) {
+        if (event.target !== popup && event.target !== popPhoto[i] && event.target !== popTitle[i] && event.target !== popBtn[i] && event.target !== popItem[i]) {
+            result = true;
+        } else return;
+    }
+
+    if (result) {
+        wrapper.classList.remove('darkness2');
+        popWrapper.classList.remove('flex');
+        document.body.classList.remove('overflow2');
+    }
+}
 
 
 
-// function changePet1() {
-//     pet1Name.innerHTML = myJson[Math.floor(Math.random()*9)].name;
-//     pet1Photo.src = 'assets/img/small%20pets/woody.png';
-// }
-//
-// changePet1()
+document.addEventListener('click', hidePopup);
 
-//console.log(myJson[8])
 
-// popup
+for (let i = 0; i < 9; i++) {
+    popItem[i].addEventListener('click', showPopup);
+}
 
-// const petBtn = document.querySelectorAll('.animal__pet_btn');
-//
-// console.log(petBtn)
+
+
+
