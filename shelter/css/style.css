@@ -272,7 +272,7 @@ h1 {
     justify-content: end;
     align-items: center;
     width: 1000px;
-    height: 700px;
+    height: 610px;
     transform:translate(-50%, -50%);
     background-color: transparent;
     z-index: 10;
@@ -283,10 +283,67 @@ h1 {
 }
 
 .popup {
+    display: flex;
     width: 900px;
-    height: 600px;
+    height: 500px;
     background-color: #FAFAFA;
     border-radius: 9px;
+}
+
+.popup__image {
+    flex-basis: 60%;
+    pointer-events: none;
+}
+
+.popup__description {
+    flex-basis: 42%;
+    padding-right: 20px;
+    pointer-events: none;
+}
+
+.popup__title {
+    margin-top: 50px;
+    margin-bottom: 9px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    pointer-events: none;
+}
+
+.popup__list {
+    list-style: initial;
+}
+
+.popup__item-title {
+    font-weight: bold;
+    color: black;
+}
+
+.popup__item {
+    color: #F1CDB3;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    letter-spacing: 0.06em;
+}
+
+.age, .inoculations, .diseases, .parasites {
+    color: black;
+}
+
+
+
+.type, .breed {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
 }
 
 .popup__circle {
@@ -299,6 +356,30 @@ h1 {
     line-height: 52px;
     transform: translateX(-15px);
 }
+
+.popup__paragraph {
+    margin-top: 42px;
+    margin-bottom: 41px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.inoculations__title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+
 
 .popup__circle:hover {
     background-color: #FDDCC4;

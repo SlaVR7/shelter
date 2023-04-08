@@ -165,15 +165,13 @@ let randArr = [];
 
 
 function createElements() {
-
     let random = Math.floor(Math.random() * 40);
+
     if (random === randArr.at(-1)) {
         random++;
     }
 
     randArr.push(random);
-
-
 
     const imageArr = [];
     const nameArr = [];
@@ -206,8 +204,74 @@ function createElements() {
         pets[i].prepend(imageArr[i]);
         pets[i].appendChild(btnArr[i]);
     }
+
+
 }
 
 document.addEventListener('DOMContentLoaded', createElements);
+
+// POPUP
+
+const bigImgContainer = document.querySelector('.popup__image'),
+    popup = document.querySelector('.popup'),
+    popItem = document.querySelectorAll('.animal__item'),
+    bigPopTitle = document.querySelector('.popup__title'),
+    bigType = document.querySelector('.type'),
+    bigBreed = document.querySelector('.breed'),
+    bigParagraph = document.querySelector('.popup__paragraph'),
+    bigAge = document.querySelector('.age'),
+    bigInoculations = document.querySelector('.inoculations'),
+    bigDiseases = document.querySelector('.diseases'),
+    bigParasites = document.querySelector('.parasites'),
+    bigImg = document.createElement('img'),
+    popWrapper = document.querySelector('.popup-wrapper'),
+    cardImage = document.querySelectorAll('.animal__pet_photo'),
+    cardTitle = document.querySelectorAll('.animal__pet_name'),
+    cardBtn = document.querySelectorAll('.animal__pet_btn');
+
+function showPopup() {
+    let number = randArr[randArr.length - 1] % 8;
+
+    wrapper.classList.add('darkness2');
+    popWrapper.classList.add('flex');
+    document.body.classList.add('overflow2');
+
+    bigImg.src = 'assets/img/bigPets/' + myJson[number].img.slice(21);
+    bigImgContainer.appendChild(bigImg);
+    bigPopTitle.innerText = myJson[number].name;
+    bigType.innerText = myJson[number].type;
+    bigBreed.innerHTML = myJson[number].breed;
+    bigParagraph.innerHTML = myJson[number].description;
+    bigAge.innerHTML = myJson[number].age;
+    bigInoculations.innerHTML = myJson[number].inoculations;
+    bigDiseases.innerHTML = myJson[number].diseases;
+    bigParasites.innerHTML = myJson[number].parasites;
+}
+
+function hidePopup(event) {
+    let result;
+    console.log(event.target !== cardImage[0])
+    for (let i = 0; i < 8; i++) {
+
+
+        if (event.target !== popup && event.target !== cardImage[i] && event.target !== cardTitle[i] && event.target !==cardBtn[i] && event.target !== popItem[i]) {
+            result = true;
+        } else return;
+    }
+
+    if (result) {
+        wrapper.classList.remove('darkness2');
+        popWrapper.classList.remove('flex');
+        document.body.classList.remove('overflow2');
+
+        bigImgContainer.innerHTML = '';
+    }
+}
+
+document.addEventListener('click', hidePopup);
+
+for (let i = 0; i < 8; i++) {
+    pets[i].addEventListener('click',{handleEvent: showPopup, a: i});
+}
 
 
