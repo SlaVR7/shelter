@@ -67,6 +67,9 @@ function animationEnd(animation) {
         const animalCenter = document.getElementById('animal__active');
         animalCenter.innerHTML = animalLeft.innerHTML;
 
+        defineSelectors()
+        handleShowPopupListener();
+
         // LEFT ITEM
         let random = Math.floor(Math.random() * 8);
 
@@ -138,6 +141,9 @@ function animationEnd(animation) {
         const animalRight = document.getElementById('animal__right');
         const animalCenter = document.getElementById('animal__active');
         animalCenter.innerHTML = animalRight.innerHTML;
+
+        defineSelectors();
+        handleShowPopupListener();
 
         // LEFT ITEM
         let random = Math.floor(Math.random() * 8),
@@ -294,7 +300,7 @@ if (document.documentElement.clientWidth < 768) {
 
 // POPUP
 
-const popItem = document.querySelectorAll('.animal__item'),
+let popItem = document.querySelectorAll('.animal__item'),
     popWrapper = document.querySelector('.popup-wrapper'),
     popup = document.querySelector('.popup'),
     popPhoto = document.querySelectorAll('.animal__pet_photo'),
@@ -312,9 +318,13 @@ const popItem = document.querySelectorAll('.animal__item'),
     bigImg = document.createElement('img');
 
 function showPopup() {
+    console.log(showPopup)
     wrapper.classList.add('darkness2');
     popWrapper.classList.add('flex');
     document.body.classList.add('overflow2');
+
+    console.log(wrapper)
+    console.log(popWrapper)
 
     let random2,
         random3;
@@ -380,6 +390,7 @@ function hidePopup(event) {
     }
 
     if (result) {
+        console.log('hidePopup')
         wrapper.classList.remove('darkness2');
         popWrapper.classList.remove('flex');
         document.body.classList.remove('overflow2');
@@ -393,8 +404,33 @@ function hidePopup(event) {
 document.addEventListener('click', hidePopup);
 
 
-for (let i = 0; i < 9; i++) {
-    popItem[i].addEventListener('click', {handleEvent: showPopup, a: i});
+
+function handleShowPopupListener() {
+    for (let i = 0; i < 9; i++) {
+        popItem[i].addEventListener('click', {handleEvent: showPopup, a: i});
+    }
+}
+
+handleShowPopupListener()
+
+
+function defineSelectors() {
+    popItem = document.querySelectorAll('.animal__item'),
+        popWrapper = document.querySelector('.popup-wrapper'),
+        popup = document.querySelector('.popup'),
+        popPhoto = document.querySelectorAll('.animal__pet_photo'),
+        popTitle = document.querySelectorAll('.animal__pet_name'),
+        popBtn = document.querySelectorAll('.animal__pet_btn'),
+        bigImgContainer = document.querySelector('.popup__image'),
+        bigPopTitle = document.querySelector('.popup__title'),
+        bigType = document.querySelector('.type'),
+        bigBreed = document.querySelector('.breed'),
+        bigParagraph = document.querySelector('.popup__paragraph'),
+        bigAge = document.querySelector('.age'),
+        bigInoculations = document.querySelector('.inoculations'),
+        bigDiseases = document.querySelector('.diseases'),
+        bigParasites = document.querySelector('.parasites'),
+        bigImg = document.createElement('img');
 }
 
 

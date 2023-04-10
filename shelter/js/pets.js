@@ -284,6 +284,7 @@ function showPopup() {
     document.body.classList.add('overflow2');
 
     bigImg.src = 'assets/img/bigPets/' + myJson[number].img.slice(21);
+    bigImg.classList.add('popup__image_photo');
     bigImgContainer.appendChild(bigImg);
     bigPopTitle.innerText = myJson[number].name;
     bigType.innerText = myJson[number].type;
