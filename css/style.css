@@ -334,8 +334,6 @@ h1 {
     color: black;
 }
 
-
-
 .type, .breed {
     font-family: 'Georgia';
     font-style: normal;
@@ -378,8 +376,6 @@ h1 {
     letter-spacing: 0.06em;
     color: #000000;
 }
-
-
 
 .popup__circle:hover {
     background-color: #FDDCC4;
@@ -455,6 +451,11 @@ h1 {
     overflow: hidden;
     border-radius: 9px;
     background: #FAFAFA;
+}
+
+.animal__pet_photo {
+    width: 270px;
+    height: 270px;
 }
 
 @keyframes  move-left {
