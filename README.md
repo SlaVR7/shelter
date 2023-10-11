@@ -1,6 +1,6 @@
 # Shelter
 
-Shelter is a website consisting of two pages, made adaptive and interactive.
+Shelter is a website consisting of two pages, made adaptive and interactive. Data about pets is taken from a json file, which is similar to working with data from a server.
 
 ## Technology Stack:
 
